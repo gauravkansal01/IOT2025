@@ -1,0 +1,21 @@
+<!-- dispaly 1111... in text box on click of 1 button    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM1</title>
+  </head>
+  <body>
+    <input type="text" id="inone" readonly /><br />
+
+    <br />
+    <button id="bt1" onclick="func1()">1</button>
+    <script>
+      function func1() {
+        document.querySelector("#inone").value += 1;
+      }
+    </script>
+  </body>
+</html>

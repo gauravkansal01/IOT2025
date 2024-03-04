@@ -1,0 +1,48 @@
+<!-- dispaly sum of entered two numbers on page on click of = button   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM1</title>
+  </head>
+  <body>
+    <input type="text" id="inone" readonly /><br />
+    <p id="psum">Sum is:</p>
+
+    <br />
+    <button id="bt1" onclick="func1()">1</button>
+    <button id="bt2" onclick="func2()">2</button>
+    <button id="sum" onclick="sumfunc()">+</button>
+    <button id="equal" onclick="total()">=</button>
+    <button id="blank" onclick="blank()">C</button>
+    <script>
+      let num = "";
+      function func1() {
+        let val1 = document.querySelector("#bt1").innerText;
+        num = num + val1;
+        document.querySelector("#inone").value = num;
+      }
+      function func2() {
+        let val2 = document.querySelector("#bt2").innerText;
+        num = num + val2;
+        document.querySelector("#inone").value = num;
+      }
+
+      function sumfunc() {
+        let val3 = document.querySelector("#sum").innerText;
+        num = num + val3;
+        document.querySelector("#inone").value = num;
+      }
+
+      function total() {
+        let total = eval(num);
+        document.querySelector("#psum").innerText += total;
+      }
+
+      function blank() {
+        document.querySelector("#psum").innerText = ` `;
+        document.querySelector("#inone").value = ` `;
+      }
+    </script>
+  </body>
+</html>
