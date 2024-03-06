@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Demo1</title>
+  </head>
+  <body>
+    <input type="text" id="t1" />
+    <button id="b1" onclick="func()">Show</button>
+    <p id="p1">value</p>
+
+    <script>
+      function func() {
+        let val = document.getElementById("t1").value;
+        console.log(val);
+        document.getElementById("p1").innerText = val;
+      }
+    </script>
+  </body>
+</html>
