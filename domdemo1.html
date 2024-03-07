@@ -8,12 +8,30 @@
     <button id="b1" onclick="func()">Show</button>
     <p id="p1">value</p>
 
+    <p class="pc1">Paragraph1</p>
+    <p class="pc1">Paragraph2</p>
+    <h1 class="pc1">Heading1</h1>
+
+    <img id="tree1" src="tree.jfif" />
     <script>
-      function func() {
-        let val = document.getElementById("t1").value;
-        console.log(val);
-        document.getElementById("p1").innerText = val;
-      }
+      // function func() {
+      //   // get element by id
+      //   let val = document.getElementById("t1").value;
+      //   console.log(val);
+      //   document.getElementById("p1").innerText = val;
+      // }
+      // // get element by tag
+      // let node = document.getElementsByTagName("p");
+      // console.log(node);
+      // console.log(node[0].innerText);
+
+      // // get element by class name
+      // let node1 = document.getElementsByClassName("pc1");
+      // console.log(node1);
+      // console.log(node1[2].innerText);
+
+      //
+      document.getElementById("tree1").src = "tree2.jfif";
     </script>
   </body>
 </html>

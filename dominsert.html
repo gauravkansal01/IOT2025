@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <title>DOM Insert Demo</title>
+</head>
+<body>
+  <style>
+    .alert {
+      padding: 15px;
+      border: 1px solid #d6e9c6;
+      border-radius: 4px;
+      color: #3c763d;
+      background-color: #dff0d8;
+    }
+  </style>
+
+  <div class="alert">
+    <strong>Hi there!</strong> You've read an important message.
+    <b> already present</b>
+  </div>
+
+  <script>
+    // example 1
+    // Creation of a new node and insert it into the body.
+    let div1 = document.createElement("div"); // step 1
+    // div1.className = "alert"; // step 2
+    div1.innerHTML =
+      "<strong>Hi there!</strong> You've read an important message. <b> newly added"; // step 3
+
+    document.body.append(div1); // step 4 . after creation we have appended the element.
+
+    //   // example 2
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "Hi I am newly added heading";
+
+      document.body.append(h1);
+    //
+  </script>
+
+  //
+  <!-- Example 3 -->
+  // <div id="div1">
+  //   <p id="p1">This is a paragraph.</p>
+  //   <p id="p2">This is another paragraph.</p>
+  // </div>
+
+  //
+  <script>
+    //   const para = document.createElement("p");
+    //   const node = document.createTextNode("This is new."); // create like innerhtml
+    //   para.appendChild(node); //  append text in newly created para "p"
+    //   // same as para.innerHTML = "This is new." ;
+    //   const element = document.getElementById("div1");
+    //   element.appendChild(para);
+    //
+  </script>
+</body>
