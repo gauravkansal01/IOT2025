@@ -6,7 +6,7 @@
   <body>
     <input type="text" id="t1" />
     <button id="b1" onclick="func()">Show</button>
-    <p id="p1">value</p>
+    <p id="p1">value print</p>
 
     <p class="pc1">Paragraph1</p>
     <p class="pc1">Paragraph2</p>
@@ -14,12 +14,15 @@
 
     <img id="tree1" src="tree.jfif" />
     <script>
-      // function func() {
-      //   // get element by id
-      //   let val = document.getElementById("t1").value;
-      //   console.log(val);
-      //   document.getElementById("p1").innerText = val;
-      // }
+      let val = document.getElementById("p1").innerHTML;
+      console.log(val);
+
+      function func() {
+        // get element by id
+        let val = document.getElementById("t1").value;
+        console.log(val);
+        document.getElementById("p1").innerText = val;
+      }
       // // get element by tag
       // let node = document.getElementsByTagName("p");
       // console.log(node);

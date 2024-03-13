@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Insert Loops</title>
+  </head>
+  <body>
+    <h1>To Do App</h1>
+    Task: <input id="in1" type="text" /> Completion Date:
+    <input id="dt1" type="date" />
+    <button id="bt1" onclick="func1()">Submit</button>
+    <div id="dv" style="border: 1px solid red; margin-top: 10px"></div>
+
+    <script>
+      let pid = "";
+      let btid = "";
+      let divid = "";
+      let num = 0;
+      function func1() {
+        // Create " div " element  and insert "date" as inner html
+        let divtag = document.createElement("div");
+        const dt = new Date();
+        divtag.innerHTML =
+          "<strong>Submission Date : </strong>" + dt.toDateString();
+
+        // Create " p " element  and insert "input value from text box " as inner html
+        let ptag = document.createElement("p");
+        ptag.innerHTML =
+          "<strong>Task to be completed : </strong>" +
+          document.getElementById("in1").value;
+
+        // Create " p " element  and insert "input value from text box " as inner html
+        let dttag = document.createElement("p");
+        dttag.innerHTML =
+          "<strong>Date to complete : </strong>" +
+          document.getElementById("dt1").value;
+
+        // Create " button " element  and insert "delete" as inner html
+        let bt = document.createElement("button");
+        bt.innerHTML = "Task Completed";
+
+        // creating variables for creating ids for  p tag , button tag and div tag
+        num = num + 1;
+        pid = "id" + num;
+        btid = "bt" + num;
+        divid = "div" + num;
+        dtid = "dt" + num;
+
+        // set ids for div , p and bt using setAttribute method
+        divtag.setAttribute("id", divid);
+        ptag.setAttribute("id", pid);
+        bt.setAttribute("id", btid);
+        dttag.setAttribute("id", dtid);
+
+        // append div in body and p tag and bt tag in newly created div tag
+        document.body.append(divtag);
+        document.getElementById(`${divid}`).append(ptag);
+        document.getElementById(`${divid}`).append(dttag);
+        document.getElementById(`${divid}`).append(bt);
+
+        // remove div tag on clicking button by using setAttribute method
+        bt.setAttribute("onclick", `${divid}.remove()`);
+      }
+    </script>
+  </body>
+</html>

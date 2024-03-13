@@ -8,13 +8,13 @@
     <title>DOM1</title>
   </head>
   <body>
-    <input type="text" id="inone" readonly /><br />
-
+    <input type="text" id="id1" readonly /><br />
     <br />
     <button id="bt1" onclick="func1()">1</button>
     <script>
       function func1() {
-        document.querySelector("#inone").value += 1;
+        document.querySelector("#id1").value += 1;
+        //document.getElementById("inone").value += 1;
       }
     </script>
   </body>
